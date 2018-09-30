@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.haoli</groupId>
+    <artifactId>HaoLi-Log</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>HaoLi-Log-Api</artifactId>
+  <name>HaoLi-Log-Api</name>
+  <url>http://maven.apache.org</url>
+
+  <dependencies>
+  	<dependency>
+  		<groupId>com.haoli</groupId>
+    	<artifactId>HaoLi-Log-Service</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	
+ 	<dependency>
+  		<groupId>com.haoli</groupId>
+    	<artifactId>HaoLi-Log-Dao</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+
+  </dependencies>
+  
+  
+  	<build>
+  		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.haoli.HaoLiLogApi</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<!-- 动态指定配置文件 -->
+	<profiles>
+		<profile>
+			<id>local</id>
+			<properties>
+				<profileActive>sit</profileActive>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+
+		<profile>
+			<id>prod</id>
+			<properties>
+				<profileActive>prod</profileActive>
+			</properties>
+		</profile>
+	</profiles>
+</project>

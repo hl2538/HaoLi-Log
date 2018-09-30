@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.haoli</groupId>
+  <artifactId>HaoLi-Log</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>HaoLi-Log-System</name>
+  <description>Log system for haoli's projects</description>
+  
+  <dependencies>
+  
+  	<dependency>
+  	  <groupId>com.haoli</groupId>
+  	  <artifactId>HaoLi-Common-Sdk</artifactId>
+  	  <version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+
+  </dependencies>
+  
+  <modules>
+	<module>HaoLi-Log-Api</module>
+    <module>HaoLi-Log-Console</module>
+    <module>HaoLi-Log-Service</module>
+    <module>HaoLi-Log-Dao</module>
+  </modules>
+</project>
